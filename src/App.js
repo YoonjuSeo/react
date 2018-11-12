@@ -1,24 +1,14 @@
 import React, { Component } from 'react';
-
-
+import Yoonju from './Yoonju'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>My first react app!</h1>
+        <p>Welcome</p>
+        <Yoonju name="Soma" age="3" fur="brown"/>
+        <Yoonju name="Clover" age = "2" fur="white"/>
       </div>
     );
   }

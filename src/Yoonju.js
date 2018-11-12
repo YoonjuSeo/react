@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import Yoonju from './Yoonju'
 
 class Yoonju extends Component{
     render(){
+        //console.log(this.props);
+        const{name,age,fur}= this.props;
         return(
             <div className = "yoonju">
-                <div>Name : Clover</div>
-                <div>Age: 2</div>
-                <div>Fur: White</div>
+                <div>Name : {name}</div>
+                <div>Age: {age}</div>
+                <div>Fur: {fur}</div>
             </div>
         )
     }
