@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Yoonju from './Yoonju'
+import AddInfo from './AddInfo'
 
 class App extends Component {
   state = {
@@ -9,12 +10,20 @@ class App extends Component {
       {name: 'Chance', age:'1', color:'brown', id:3}
     ]
   }
+  AddInfo=(item)=>{
+    //console.log(info);
+    item.id = Math.random();
+    let info =[...this.state.info, item];
+    this.setState({
+      info : info
+    });
+  }
   render() {
     return (
       <div className="App">
         <h1>My first react app!</h1>
-        <p>Welcome</p>
         <Yoonju info={this.state.info}/>
+        <AddInfo addInfo={this.addInfo}/>
       </div>
     );
   }
