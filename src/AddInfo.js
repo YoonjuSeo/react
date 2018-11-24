@@ -13,7 +13,8 @@ class AddInfo extends Component{
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        //console.log(this.state);
+        this.props.addInfo(this.state);
     }
     render(){
         return(
@@ -21,9 +22,9 @@ class AddInfo extends Component{
             <form onSubmit ={this.handleSubmit}>
                 <label htmlFor="name">Name:</label>
                 <input type="text" id="name" onChange={this.handleChange} />
-                <label htmlFor="name">Age:</label>
+                <label htmlFor="age">Age:</label>
                 <input type="text" id="age" onChange={this.handleChange} />
-                <label htmlFor="name">Color:</label>
+                <label htmlFor="color">Color:</label>
                 <input type="text" id="color" onChange={this.handleChange} />
                 <button>Submit</button>
             </form>

@@ -5,9 +5,9 @@ import AddInfo from './AddInfo'
 class App extends Component {
   state = {
     info : [
-      {name: 'Soma', age:'3', color:'brown', id:1},
-      {name: 'Clover', age:'2', color:'white', id:2},
-      {name: 'Chance', age:'1', color:'brown', id:3}
+      {name: 'Soma', age:3, color:'brown', id:1},
+      {name: 'Clover', age:2, color:'white', id:2},
+      {name: 'Chance', age:1, color:'brown', id:3}
     ]
   }
   AddInfo=(item)=>{
@@ -18,11 +18,19 @@ class App extends Component {
       info : info
     });
   }
+  deleteInfo = (id) =>{
+    let info = this.state.info.filter(item=>{
+      return item.id !== id
+    });
+    this.setState({
+      info: info
+    });
+  }
   render() {
     return (
       <div className="App">
         <h1>My first react app!</h1>
-        <Yoonju info={this.state.info}/>
+        <Yoonju info={this.state.info} deleteInfo={this.deleteInfo}/>
         <AddInfo addInfo={this.addInfo}/>
       </div>
     );
