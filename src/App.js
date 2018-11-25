@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Yoonju from './Yoonju'
+import Info from './Info'
 import AddInfo from './AddInfo'
 
 class App extends Component {
@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>My first react app!</h1>
-        <Yoonju info={this.state.info} deleteInfo={this.deleteInfo}/>
+        <Info info={this.state.info} deleteInfo={this.deleteInfo}/>
         <AddInfo addInfo={this.addInfo}/>
       </div>
     );
